@@ -52,9 +52,9 @@ def run():
   # loop over all video files and process with facemap
   for vid_path in video_file_paths:
         
-    if 'Face' in vid_path:
+    if 'face' in os.path.basename(vid_path).lower():
       params=face_params
-    elif 'Behavior' in vid_path:
+    elif any(s in os.path.basename(vid_path).lower() for s in ('behavior', 'side')):
       params=behav_params
     else:
       print(vid_path+' does not contain Face or Behavior in its name, skipping')
