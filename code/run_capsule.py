@@ -44,7 +44,7 @@ behav_params={
 def run():
   # find all attached .mp4 videos in data folder 
   video_base_path="/data"
-  video_file_paths=glob.glob(os.path.join(video_base_path,'*','*.mp4'),recursive=True)
+  video_file_paths=glob.glob(os.path.join(video_base_path,'**','*.mp4'),recursive=True)
     
   if len(video_file_paths)==0:
     raise FileNotFoundError('no .mp4 videos found in data folder')

@@ -1,4 +1,4 @@
-# hash:sha256:b483f637511fce8db9503838ce623d44e52da275561cb43b49cdfcfca9637e7d
+# hash:sha256:5f802a1285a9a030d7067b874362e0b9f26b8158768acdbde0909053d613aa78
 FROM registry.codeocean.allenneuraldynamics.org/codeocean/tensorflow:2.11-python3.10-cuda11.7.0-runtime-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -18,7 +18,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -U --no-cache-dir \
-    facemap[gui]==1.0.4 \
+    facemap[gui]==1.0.5 \
     h5py==3.10.0 \
     matplotlib==3.8.0 \
     natsort==8.4.0 \
