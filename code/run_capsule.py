@@ -62,11 +62,8 @@ def run():
       
     process.run(
       [[vid_path]],
-      sbin=1,
       motSVD=True,
       movSVD=True,
-      GUIobject=None,
-      parent=None,
       proc=params,
       savepath=savepath,
     )
